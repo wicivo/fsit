@@ -63,7 +63,7 @@ public abstract class ServerPlayerEntityMixin extends PlayerEntityMixin implemen
 		super.fsit$setPose(pose);
 
 		if (this.isModded) ServerPlayNetworking.send((ServerPlayerEntity) (Object) this, new PoseSyncS2CPacket(pose));
-		else if (this.isPosing()) this.sendMessage(Text.of("Press Sneak key to get up"), true);
+		else if (this.isPosing()) this.sendMessage(Text.of("Нажмите клавишу SHIFT, чтобы встать"), true);
 	}
 
 	@Override
