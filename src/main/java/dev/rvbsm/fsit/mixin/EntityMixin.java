@@ -20,7 +20,7 @@ public abstract class EntityMixin {
 		if (entity instanceof ServerPlayerEntity riddenPlayer) {
 			riddenPlayer.networkHandler.sendPacket(new EntityPassengersSetS2CPacket(riddenPlayer));
 			if (!((PlayerConfigAccessor) riddenPlayer).fsit$isModded())
-				riddenPlayer.sendMessage(Text.of("Look up and press Sneak key to dismount a player"), true);
+				riddenPlayer.sendMessage(Text.of("Посмотрите вверх и нажмите клавишу SHIFT, чтобы снять игрока"), true);
 		}
 	}
 
